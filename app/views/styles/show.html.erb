@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @style.name %>
+</p>
+
+<p>
+  <b>Caption:</b>
+  <%= @style.caption %>
+</p>
+<p>
+  <b>Image:</b>
+  <%= image_tag @style.image_url(:thumb).to_s %>
+</p>
+
+<%= link_to 'Edit', edit_style_path(@style) %> |
+<%= link_to 'Back', styles_path %>

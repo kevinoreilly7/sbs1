@@ -1,0 +1,45 @@
+<%= form_for(@porfolio) do |f| %>
+  <% if @porfolio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@porfolio.errors.count, "error") %> prohibited this porfolio from being saved:</h2>
+
+      <ul>
+      <% @porfolio.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :profile_id %><br />
+    <%= f.number_field :profile_id %>
+  </div>
+  <div class="field">
+    <%= f.label :sf_amount %><br />
+    <%= f.number_field :sf_amount %>
+  </div>
+  <div class="field">
+    <%= f.label :sf_price %><br />
+    <%= f.text_field :sf_price %>
+  </div>
+  <div class="field">
+    <%= f.label :monthly_price %><br />
+    <%= f.number_field :monthly_price %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br />
+    <%= f.text_field :location %>
+  </div>
+  <div class="field">
+    <%= f.label :created_on %><br />
+    <%= f.datetime_select :created_on %>
+  </div>
+  <div class="field">
+    <%= f.label :updated_on %><br />
+    <%= f.datetime_select :updated_on %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
