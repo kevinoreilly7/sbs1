@@ -4,7 +4,7 @@ class Profile < ActiveRecord::Base
 
   attr_accessible :email, :first_name, :last_name, :password, :password_confirmation, :title
 
-  has_many :styles
+  has_many :portfolios
 
   validates :email, uniqueness: true
 end

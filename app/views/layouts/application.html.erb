@@ -9,6 +9,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+    <% if session[:profile_id].present? %>
+        <p>Welcome back, <%= current_profile.email %>.
+          <%= link_to "Sign Out", session_url, method: 'delete' %></p>
+     <% else %>
+        <p><%= link_to "Sign Up", new_profile_url %>  or <%= link_to "Sign In", new_session_url %></p>
+    <% end %>
+     <p><%= notice %></p>
 
   <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">

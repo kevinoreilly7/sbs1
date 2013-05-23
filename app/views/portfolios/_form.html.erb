@@ -1,10 +1,10 @@
-<%= form_for(@porfolio) do |f| %>
-  <% if @porfolio.errors.any? %>
+<%= form_for(@portfolio) do |f| %>
+  <% if @portfolio.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@porfolio.errors.count, "error") %> prohibited this porfolio from being saved:</h2>
+      <h2><%= pluralize(@portfolio.errors.count, "error") %> prohibited this portfolio from being saved:</h2>
 
       <ul>
-      <% @porfolio.errors.full_messages.each do |msg| %>
+      <% @portfolio.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
@@ -36,8 +36,8 @@
     <%= f.datetime_select :created_on %>
   </div>
   <div class="field">
-    <%= f.label :updated_on %><br />
-    <%= f.datetime_select :updated_on %>
+    <%= f.label :created_at %><br />
+    <%= f.datetime_select :created_at %>
   </div>
   <div class="actions">
     <%= f.submit %>

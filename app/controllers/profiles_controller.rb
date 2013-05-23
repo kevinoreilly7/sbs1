@@ -42,7 +42,7 @@ class ProfilesController < ApplicationController
   def create
     @profile = Profile.new(params[:email])
     @profile.password = params[:password]
-    @user.password_confirmation = params[:password_confirmation]
+    @profile.password_confirmation = params[:password_confirmation]
 
     respond_to do |format|
       if @profile.save
@@ -60,7 +60,7 @@ class ProfilesController < ApplicationController
   def update
     @profile = Profile.find(params[:id])
     @profile.password = params[:password]
-    @user.password_confirmation = params[:password_confirmation]
+    @profile.password_confirmation = params[:password_confirmation]
 
     respond_to do |format|
       if @profile.update_attributes(params[:profile])

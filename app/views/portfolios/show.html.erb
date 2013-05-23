@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Profile:</b>
+  <%= @portfolio.profile.first_name%>
+</p>
+
+<p>
+  <b>Sf amount:</b>
+  <%= @portfolio.sf_amount %>
+</p>
+
+<p>
+  <b>Sf price:</b>
+  <%= @portfolio.sf_price %>
+</p>
+
+<p>
+  <b>Monthly price:</b>
+  <%= @portfolio.monthly_price %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @portfolio.location %>
+</p>
+
+<p>
+  <b>Created on:</b>
+  <%= @portfolio.created_on %>
+</p>
+
+<p>
+  <b>Created at:</b>
+  <%= @portfolio.created_at %>
+</p>
+
+
+<%= link_to 'Edit', edit_portfolio_path(@portfolio) %> |
+<%= link_to 'Back', portfolios_path %>

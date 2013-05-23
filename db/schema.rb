@@ -11,16 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130521035403) do
+ActiveRecord::Schema.define(:version => 20130523035235) do
 
-  create_table "porfolios", :force => true do |t|
+  create_table "portfolios", :force => true do |t|
     t.integer  "profile_id"
     t.integer  "sf_amount"
     t.float    "sf_price"
     t.integer  "monthly_price"
     t.string   "location"
     t.datetime "created_on"
-    t.datetime "updated_on"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
   end

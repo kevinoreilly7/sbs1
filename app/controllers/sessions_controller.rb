@@ -4,11 +4,10 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @profile = Profile.find_by_email(params[:email])
-
-    if @profile.present? && @profile.authenticate(params[:password])
-      session[:proflie_id] = @profile.id
-      redirect_to sytles_url, notice: 'Signed in successfully.'
+    p = Profile.find_by_email(params[:email])
+    if p.present? && p.authenticate(params[:password])
+      session[:proflie_id] = @p.id
+      redirect_to styles_url, notice: 'Signed in successfully.'
     else
       render 'new'
     end

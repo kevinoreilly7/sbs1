@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  profile_id: 1
+  sf_amount: 1
+  sf_price: 1.5
+  monthly_price: 1
+  location: MyString
+  created_on: 2013-05-22 22:52:35
+  created_at: 2013-05-22 22:52:35
+
+two:
+  profile_id: 1
+  sf_amount: 1
+  sf_price: 1.5
+  monthly_price: 1
+  location: MyString
+  created_on: 2013-05-22 22:52:35
+  created_at: 2013-05-22 22:52:35
